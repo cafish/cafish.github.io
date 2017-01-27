@@ -6,7 +6,9 @@
     <entry>
       <title><![CDATA[My first blog]]></title>
       <url>http://yoursite.com/2017/01/26/My-first-blog/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<h1 id="This-is-my-first-blog"><a href="#This-is-my-first-blog" class="headerlink" title="This is my first blog"></a>This is my first blog</h1><h2 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h2><h3 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Define a function to .....................................................</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">myFunction</span><span class="params">(x)</span>:</span></div><div class="line">	<span class="keyword">for</span> x <span class="keyword">in</span> num:</div><div class="line">		x = x +<span class="number">1</span></div><div class="line">	end</div><div class="line"><span class="keyword">return</span> sum(x)</div></pre></td></tr></table></figure>
+<p>Above is a nice function</p>
+]]></content>
     </entry>
     
     <entry>
