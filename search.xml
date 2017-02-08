@@ -6,8 +6,7 @@
     <entry>
       <title><![CDATA[My first blog]]></title>
       <url>http://yoursite.com/2017/01/26/My-first-blog/</url>
-      <content type="html"><![CDATA[<h1 id="This-is-my-first-blog"><a href="#This-is-my-first-blog" class="headerlink" title="This is my first blog"></a>This is my first blog</h1><p>test</p>
-<ol>
+      <content type="html"><![CDATA[<h1 id="This-is-my-first-blog"><a href="#This-is-my-first-blog" class="headerlink" title="This is my first blog"></a>This is my first blog</h1><ol>
 <li><a href="https://www.python.org/" target="_blank" rel="external">Python</a></li>
 <li><a href="https://www.continuum.io/" target="_blank" rel="external">Anaconda</a></li>
 <li><a href="https://macdown.uranusjr.com/" target="_blank" rel="external">Macdown</a><ul>
