@@ -6,7 +6,8 @@
     <entry>
       <title><![CDATA[My first blog]]></title>
       <url>http://yoursite.com/2017/01/26/My-first-blog/</url>
-      <content type="html"><![CDATA[<h1 id="This-is-my-first-blog"><a href="#This-is-my-first-blog" class="headerlink" title="This is my first blog"></a>This is my first blog</h1><h2 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h2><ul>
+      <content type="html"><![CDATA[<h1 id="This-is-my-first-blog"><a href="#This-is-my-first-blog" class="headerlink" title="This is my first blog"></a>This is my first blog</h1><p>kdjfkdfjkdfjdkfjdk</p>
+<ul>
 <li>check</li>
 <li>test<ul>
 <li>test<ol>
