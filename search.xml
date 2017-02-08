@@ -4,17 +4,18 @@
   
     
     <entry>
-      <title><![CDATA[My first blog]]></title>
+      <title><![CDATA[A Guide to Machine Learning and Kaggle]]></title>
       <url>http://yoursite.com/2017/01/26/My-first-blog/</url>
-      <content type="html"><![CDATA[<h1 id="This-is-my-first-blog"><a href="#This-is-my-first-blog" class="headerlink" title="This is my first blog"></a>This is my first blog</h1><ol>
-<li><a href="https://www.python.org/" target="_blank" rel="external">Python</a></li>
-<li><a href="https://www.continuum.io/" target="_blank" rel="external">Anaconda</a></li>
-<li><a href="https://macdown.uranusjr.com/" target="_blank" rel="external">Macdown</a></li>
-</ol>
+      <content type="html"><![CDATA[<p>Welcome to my blog! The main content of this blog is about data science. Based on <a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram" target="_blank" rel="external">Drew Conway</a> Data Science Venn Diagram, a data scientist should have combined skills on hacking, math and stats, and substantive expertise.</p>
+<p><img src="https://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png?format=1500w" alt=""></p>
+<p>Among those skills, Machine Learning is one of the most important one. Therefore, if you want to be a data scientist, you have to know machine learning. If you are a beginner of the machine learning, this blog will be helpful for you. From today, I will post a series of guide to machine learning. And as some of you might have already known <a href="http://www.kaggle.com" target="_blank" rel="external">Kaggle</a>, which is the most popular machine learning competition website for the data scientist, I will also post the guide to Kaggle competition. </p>
+<p>Here is a brief index of the Guide to Machine Learning and Kaggle.</p>
 <a id="more"></a>
-<h3 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Define a function to .....................................................</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">myFunction</span><span class="params">(x)</span>:</span></div><div class="line">	<span class="keyword">for</span> x <span class="keyword">in</span> num:</div><div class="line">		x = x +<span class="number">1</span></div><div class="line">	end</div><div class="line"><span class="keyword">return</span> sum(x)</div></pre></td></tr></table></figure>
-<p>Above is a nice function</p>
-]]></content>
+<h2 id="Chapter-1-Introduction"><a href="#Chapter-1-Introduction" class="headerlink" title="Chapter 1: Introduction"></a>Chapter 1: Introduction</h2><h3 id="1-1-Intro-of-Machine-Learning"><a href="#1-1-Intro-of-Machine-Learning" class="headerlink" title="1.1 Intro of Machine Learning"></a>1.1 Intro of Machine Learning</h3><h3 id="1-2-Python-Environment"><a href="#1-2-Python-Environment" class="headerlink" title="1.2 Python Environment"></a>1.2 Python Environment</h3><h3 id="1-3-Python-Programming-Basics"><a href="#1-3-Python-Programming-Basics" class="headerlink" title="1.3 Python Programming Basics"></a>1.3 Python Programming Basics</h3><h2 id="Chapter-2-Numpy"><a href="#Chapter-2-Numpy" class="headerlink" title="Chapter 2: Numpy"></a>Chapter 2: Numpy</h2><h2 id="Chapter-3-Pandas"><a href="#Chapter-3-Pandas" class="headerlink" title="Chapter 3: Pandas"></a>Chapter 3: Pandas</h2><h2 id="Chapter-4-Sklearn-and-Machine-Learning"><a href="#Chapter-4-Sklearn-and-Machine-Learning" class="headerlink" title="Chapter 4: Sklearn and Machine Learning"></a>Chapter 4: Sklearn and Machine Learning</h2><h3 id="4-1-Supervised-Learning"><a href="#4-1-Supervised-Learning" class="headerlink" title="4.1 Supervised Learning"></a>4.1 Supervised Learning</h3><p>4.1.1 Classification</p>
+<p>4.1.2 Regression</p>
+<h3 id="4-2-Unsupervised-Learning"><a href="#4-2-Unsupervised-Learning" class="headerlink" title="4.2 Unsupervised Learning"></a>4.2 Unsupervised Learning</h3><p>4.2.1 Clustering</p>
+<p>4.2.2 Dimensionlity Reduction</p>
+<h2 id="Chapter-5-TensorFlow-and-Keras"><a href="#Chapter-5-TensorFlow-and-Keras" class="headerlink" title="Chapter 5: TensorFlow and Keras"></a>Chapter 5: TensorFlow and Keras</h2><h2 id="Chapter-6-Kaggle-Competition"><a href="#Chapter-6-Kaggle-Competition" class="headerlink" title="Chapter 6: Kaggle Competition"></a>Chapter 6: Kaggle Competition</h2><h3 id="6-1-Intro-of-Kaggle"><a href="#6-1-Intro-of-Kaggle" class="headerlink" title="6.1 Intro of Kaggle"></a>6.1 Intro of Kaggle</h3><h3 id="6-2-Titanic"><a href="#6-2-Titanic" class="headerlink" title="6.2 Titanic"></a>6.2 Titanic</h3><h3 id="6-3-IMDB"><a href="#6-3-IMDB" class="headerlink" title="6.3 IMDB"></a>6.3 IMDB</h3><h3 id="6-4-MNIST"><a href="#6-4-MNIST" class="headerlink" title="6.4 MNIST"></a>6.4 MNIST</h3><h3 id="6-5-NCFM-Fisheries"><a href="#6-5-NCFM-Fisheries" class="headerlink" title="6.5 NCFM Fisheries"></a>6.5 NCFM Fisheries</h3>]]></content>
     </entry>
     
     <entry>
