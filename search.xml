@@ -24,8 +24,8 @@ improves with experience E.
 <p>Therefore, the boston housing price prediction belongs to supervised machine learning task. To simplify here, we assume $X^(i)$ are the features of the house number i, such as size, location, number of rooms, etc; and $y^(i)$ is the housing price or target. For the predition task, if we build a model, we will then predict the housing price based on the input of the features.</p>
 <h3 id="Experience"><a href="#Experience" class="headerlink" title="Experience"></a>Experience</h3><pre><code>Existing experience or data
 </code></pre><p>For the boston housing price predition problem, we have 506 existing sample data. For each sample data, there are 13 features ($X^{(i)}$) and 1 target ($y^{(i)}$). Based on the existing data, we could build a target function $f(X^{(i)})$, which can predict the housing price based on the input of new features ($X^{(i)}$), such as a new house. Therefore, our task could be simplified as the following mathematic problem.</p>
-<p>Define a cost function and then minimize the cost function</p>
-<p>{&#37; math<em>block %}<br>\begin{aligned}<br>\J(\theta) = \sum</em>{i=1}^{m}\left(H_{(\theta)}(X^{(i)}-y^{(i)})\right)^2 \<br>\minimize  J(\theta)<br>\end{aligned}<br>{&#37; endmath_block %}</p>
+<p>Define a cost function $J(\theta)$ and then minimize the cost function $J(\theta)$</p>
+<p>$$minimize \sum<em>{i=1}^{m} (H</em>{(\theta)}(X^{(i)}-y^{(i)}))^2$$ </p>
 <p>For the cost function $J(\theta)$, the parameters $\theta$ are what we would like to get through the process of minimizing $J(\theta)$.</p>
 ]]></content>
     </entry>
