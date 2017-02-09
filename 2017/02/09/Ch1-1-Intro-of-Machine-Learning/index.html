@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Brady’s Blog">
 <meta property="og:description" content="Based on my first guide, machine learning (ML) is a substance of the hacking skills and math &amp;amp; stats. Actually, it is one of the most important branch of the research and application for the Arti">
 <meta property="og:image" content="http://marketbusinessnews.com/wp-content/uploads/2016/01/Google-Artificial-intelligence-AlphGo-wins-at-game-of-Go.jpg">
-<meta property="og:updated_time" content="2017-02-09T19:26:49.000Z">
+<meta property="og:updated_time" content="2017-02-09T20:00:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ch1.1 Intro of Machine Learning">
 <meta name="twitter:description" content="Based on my first guide, machine learning (ML) is a substance of the hacking skills and math &amp;amp; stats. Actually, it is one of the most important branch of the research and application for the Arti">
@@ -379,7 +379,8 @@ improves with experience E.
 </code></pre><p>The tasks of machine learning usually include many different types. We will focus on two classical tasks, <a href="">Supervised Learing</a> and <a href="">Unsupervised Learning</a>. Supervised learning cares about the predition on the unknown phenomenon. It usually includes <a href="">Classification</a> and <a href="">Regresssion</a> problems. Unsupervised learning cares about the nature of the features of the things. It usually deals with <a href="">Dimensionality Reduction</a> and <a href="">Clustering</a> problems.</p>
 <p>Therefore, the boston housing price prediction belongs to supervised machine learning task. To simplify here, we assume $X_i$ are the features of the housing, such as size, location, number of rooms, etc; and $y$ is the housing price or targe. For the predition task, if we build a model, we will then predict the housing price based on the input of the features.</p>
 <h3 id="Experience"><a href="#Experience" class="headerlink" title="Experience"></a>Experience</h3><pre><code>Existing experience or data
-</code></pre><p>For the boston housing price predition problem, we have 506 existing sample data. For each sample data, there are 13 features ($X_i$) and 1 target ($y$)</p>
+</code></pre><p>For the boston housing price predition problem, we have 506 existing sample data. For each sample data, there are 13 features ($X_i$) and 1 target ($y$). Based on the existing data, we could build a target function $f(X_i)$, which can predict the housing price based on the input of new features ($X_i$), such as a new house. Therefore, our task could be simplified as the following mathematic problem:</p>
+<p>$$minimize \sum_{i=1}^{m}(f(X_i)-y_i $$</p>
 
       
     </div>
