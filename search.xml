@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[Ch1.1 Intro of Machine Learning]]></title>
+      <url>http://yoursite.com/2017/02/09/Ch1-1-Intro-of-Machine-Learning/</url>
+      <content type="html"><![CDATA[<p><img src="http://marketbusinessnews.com/wp-content/uploads/2016/01/Google-Artificial-intelligence-AlphGo-wins-at-game-of-Go.jpg" alt=""></p>
+<p>Based on my first <a href="">guide</a>, <a href="">machine learning</a> (ML) is a substance of the hacking skills and math &amp; stats. Actually, it is one of the most important branch of the research and application for the <a href="">Artificail Intelligence</a> (AI).</p>
+<p>In 2016, <a href="">Alphago</a> of Google, as a intelligent machine, beated the champion Go player for the first time. (Note: Alphago used current most popular type of machine learning alogrithm, <a href="">deep learning</a>.)  Since then, most of the people have agreed that we entered the era of AI.</p>
+<a id="more"></a>
+<h2 id="ML-Definition"><a href="#ML-Definition" class="headerlink" title="ML Definition"></a>ML Definition</h2><p><a href="">Prof. Tom Mitchell</a> of Carnegie Mellon University defined ML as below:</p>
+<pre><code>A program can be said to learn from experience E 
+with respect to some class of tasks T
+and performace measure P,
+if its performance as tasks in T,
+as measured by P,
+improves with experience E.
+</code></pre><p>To summarize the definition, a ML algorithm must have the ability to use the existing experience (<strong>E</strong>), to imporve the performance (<strong>P</strong>) to complete one specific task (<strong>T</strong>).</p>
+<h2 id="ML-Example"><a href="#ML-Example" class="headerlink" title="ML Example"></a>ML Example</h2><p>Here we will use the boston housing price prediction model as an example to explain the ML. You do not need to understand the codes at this moment, as we will talk about it more later.</p>
+<h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><pre><code>Prediting boston housing price
+</code></pre><p>The tasks of machine learning usually include many different types. We will focus on two classical tasks, <a href="">Supervised Learing</a> and <a href="">Unsupervised Learning</a>. Supervised learning cares about the predition on the unknown phenomenon. It usually includes <a href="">Classification</a> and <a href="">Regresssion</a> problems. Unsupervised learning cares about the nature of the features of the things. It usually deals with <a href="">Dimensionality Reduction</a> and <a href="">Clustering</a> problems.</p>
+<p>Therefore, the boston housing price prediction belongs to supervised machine learning task. To simplify here, we assume $X_i$ are the features of the housing, such as size, location, number of rooms, etc; and $y$ is the housing price or targe. For the predition task, if we build a model, we will then predict the housing price based on the input of the features.</p>
+<h3 id="Experience"><a href="#Experience" class="headerlink" title="Experience"></a>Experience</h3><pre><code>Existing experience or data
+</code></pre><p>For the boston housing price predition problem, we have 506 existing sample data. For each sample data, there are 13 features ($X_i$) and 1 target ($y$)</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[A Guide to Machine Learning and Kaggle]]></title>
       <url>http://yoursite.com/2017/01/26/My-first-blog/</url>
       <content type="html"><![CDATA[<p>Welcome to my blog! The main content of this blog is about data science. Based on <a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram" target="_blank" rel="external">Drew Conway</a> Data Science Venn Diagram, a data scientist should have combined skills on hacking, math and stats, and substantive expertise.</p>

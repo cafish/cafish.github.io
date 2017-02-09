@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/02/09/Ch1-1-Intro-of-Machine-Learning/</loc>
+    
+    <lastmod>2017-02-09T19:26:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/01/26/My-first-blog/</loc>
     
     <lastmod>2017-02-09T00:09:18.000Z</lastmod>
