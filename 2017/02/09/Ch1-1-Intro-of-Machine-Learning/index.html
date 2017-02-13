@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Brady’s Blog">
 <meta property="og:description" content="Based on my first guide, machine learning (ML) is a substance of the hacking skills and math &amp;amp; stats. Actually, it is one of the most important branch of the research and application for the Arti">
 <meta property="og:image" content="http://marketbusinessnews.com/wp-content/uploads/2016/01/Google-Artificial-intelligence-AlphGo-wins-at-game-of-Go.jpg">
-<meta property="og:updated_time" content="2017-02-09T23:06:14.000Z">
+<meta property="og:updated_time" content="2017-02-13T17:52:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ch1.1 Intro of Machine Learning">
 <meta name="twitter:description" content="Based on my first guide, machine learning (ML) is a substance of the hacking skills and math &amp;amp; stats. Actually, it is one of the most important branch of the research and application for the Arti">
@@ -362,7 +362,7 @@
       
 
       
-        <p><img src="http://marketbusinessnews.com/wp-content/uploads/2016/01/Google-Artificial-intelligence-AlphGo-wins-at-game-of-Go.jpg" alt=""></p>
+        <p><img src="http://marketbusinessnews.com/wp-content/uploads/2016/01/Google-Artificial-intelligence-AlphGo-wins-at-game-of-Go.jpg" alt="Nature Cover of Alphago &copyright;Nature"></p>
 <p>Based on my first <a href="https://cafish.github.io/2017/01/26/My-first-blog/" target="_blank" rel="external">guide</a>, <a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank" rel="external">machine learning</a> (ML) is a substance of the hacking skills and math &amp; stats. Actually, it is one of the most important branch of the research and application for the <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" rel="external">Artificial Intelligence</a> (AI).</p>
 <p>In 2016, <a href="https://en.wikipedia.org/wiki/AlphaGo" target="_blank" rel="external">Alphago</a> of Google, as a intelligent machine, beated the champion Go player for the first time. (Note: Alphago used current most popular type of machine learning alogrithm, <a href="https://en.wikipedia.org/wiki/Deep_learning" target="_blank" rel="external">deep learning</a>.)  Since then, most of the people have agreed that we entered the era of AI.</p>
 <a id="more"></a>
@@ -384,7 +384,12 @@ improves with experience E.
 <p>$$ J(\theta)= \sum_{i=1}^{m} \left( H(X^{(i)})-y^{(i)}\right)^2 $$ </p>
 <p>and then minimize the cost function $J(\theta)$:</p>
 <p>$$minimize J(\theta) $$ </p>
-<p>For the cost function $J(\theta)$, the parameters $\theta$ are what we would like to get through the process of minimizing $J(\theta)$.</p>
+<p>For the cost function $J(\theta)$, the parameters $\theta$ are what we would like to get through the process of minimizing $J(\theta)$, which is the training process of the machine learning.</p>
+<h3 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h3><pre><code>How good of the ML model to complete the task
+</code></pre><p>To evaluate how good of our ML is, we need to set up some performance evaluation index. For example, for the boston housing predition problem, we can use <a href="https://en.wikipedia.org/wiki/Coefficient_of_determination" target="_blank" rel="external">R-squared</a> ($R^2$) to check how good of the model to predict the housing price of the testing housing examples. </p>
+<p>The range of $R^2$ is from 0 to 1, and the higher the better.</p>
+<p>Except for $R^2$, there are many other different indexes we will use to evaluate different models which will be introduced later. </p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>To sum up here, for a ML problem, our task is to use the existing data (or experience) to create a ML model, which will have good performance to make predictions based on new data.</p>
 
       
     </div>
@@ -552,7 +557,7 @@ improves with experience E.
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ML-Definition"><span class="nav-number">1.</span> <span class="nav-text">ML Definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ML-Example"><span class="nav-number">2.</span> <span class="nav-text">ML Example</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task"><span class="nav-number">2.1.</span> <span class="nav-text">Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Experience"><span class="nav-number">2.2.</span> <span class="nav-text">Experience</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ML-Definition"><span class="nav-number">1.</span> <span class="nav-text">ML Definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ML-Example"><span class="nav-number">2.</span> <span class="nav-text">ML Example</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Task"><span class="nav-number">2.1.</span> <span class="nav-text">Task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Experience"><span class="nav-number">2.2.</span> <span class="nav-text">Experience</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Performance"><span class="nav-number">2.3.</span> <span class="nav-text">Performance</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">3.</span> <span class="nav-text">Summary</span></a></li></ol></div>
             
 
           </div>
