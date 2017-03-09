@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[Lane lines detection]]></title>
       <url>http://yoursite.com/2017/03/08/Lane-lines-detection/</url>
-      <content type="html"><![CDATA[<p><img src="https://lh3.googleusercontent.com/AmJ5S91G6UifVsCpFcPPMa3znPPkDCDEL4yTrAMqqJPpjT-XkpV5NgzOg_VGa4RPNtQgyLKNFtDkKwI=w2560-h1192" alt="Lane Lines Detected"></p>
+      <content type="html"><![CDATA[<p><img src="http://omiuf085h.bkt.clouddn.com/image/Lane-lines-detection/finalimage.jpg" alt=""></p>
 <p><strong>Finding Lane Lines on the Road</strong></p>
 <p>This article introduces how I built pipeline to detect the lane lines for a self-driving car project.</p>
 <p>The goals / steps of this project are the following:</p>
@@ -14,8 +14,9 @@
 <li>Make a pipeline that finds lane lines on the road</li>
 <li>Apply the pipeline to find lane lines in videos</li>
 </ul>
+<a id="more"></a>
 <hr>
-<p>My pipeline consisted of the following steps:</p>
+<h2 id="Pipeline"><a href="#Pipeline" class="headerlink" title="Pipeline"></a>Pipeline</h2><p>My pipeline consisted of the following steps:</p>
 <ol>
 <li>Converted the images to grayscale;</li>
 <li>Applied Gaussian smoothing</li>
@@ -27,31 +28,31 @@
 <li>Merged left and right lines</li>
 <li>Drew the merged lines along with the original images</li>
 </ol>
-<p>Steps 1 to 5 can be completed by the following helpers as provided:</p>
+<h3 id="Steps-1-to-5"><a href="#Steps-1-to-5" class="headerlink" title="Steps 1 to 5"></a>Steps 1 to 5</h3><p>Steps 1 to 5 can be completed by the following helpers as provided:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">grayscale</span><span class="params">(img)</span>:</span></div><div class="line">	<span class="comment"># Converted the images to grayscale</span></div><div class="line">   <span class="keyword">return</span> cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">gaussian_blur</span><span class="params">(img, kernel_size)</span>:</span></div><div class="line">	<span class="comment"># Applied Gaussian smoothing</span></div><div class="line">   <span class="keyword">return</span> cv2.GaussianBlur(img, (kernel_size, kernel_size), <span class="number">0</span>)</div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">canny</span><span class="params">(img, low_threshold, high_threshold)</span>:</span></div><div class="line">	<span class="comment"># Found the canny edges</span></div><div class="line">	<span class="keyword">return</span> cv2.Canny(img, low_threshold, high_threshold)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">region_of_interest</span><span class="params">(img, vertices)</span>:</span></div><div class="line">	<span class="comment">#defining a blank mask to start with</span></div><div class="line">	mask = np.zeros_like(img)   </div><div class="line">    </div><div class="line">    <span class="keyword">if</span> len(img.shape) &gt; <span class="number">2</span>:</div><div class="line">        channel_count = img.shape[<span class="number">2</span>]  <span class="comment"># i.e. 3 or 4 depending on your image</span></div><div class="line">        ignore_mask_color = (<span class="number">255</span>,) * channel_count</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        ignore_mask_color = <span class="number">255</span></div><div class="line">        </div><div class="line">    <span class="comment">#filling pixels inside the polygon defined by "vertices" with the fill color    </span></div><div class="line">    cv2.fillPoly(mask, vertices, ignore_mask_color)</div><div class="line">    </div><div class="line">    <span class="comment">#returning the image only where mask pixels are nonzero</span></div><div class="line">    masked_image = cv2.bitwise_and(img, mask)</div><div class="line">    <span class="keyword">return</span> masked_image</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw_lines</span><span class="params">(img, lines, color=[<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>], thickness=<span class="number">10</span>)</span>:</span></div><div class="line">	<span class="comment"># draw lines on image</span></div><div class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> lines:</div><div class="line">        <span class="keyword">for</span> x1,y1,x2,y2 <span class="keyword">in</span> line:</div><div class="line">            cv2.line(img, (x1, y1), (x2, y2), color, thickness)</div><div class="line">            </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hough_lines</span><span class="params">(img, rho, theta, threshold, min_line_len, max_line_gap)</span>:</span></div><div class="line">	<span class="comment"># Ran Hough lines</span></div><div class="line">    lines = cv2.HoughLinesP(img, rho, theta, threshold, np.array([]), minLineLength=min_line_len, maxLineGap=max_line_gap)</div><div class="line">    line_img = np.zeros((img.shape[<span class="number">0</span>], img.shape[<span class="number">1</span>], <span class="number">3</span>), dtype=np.uint8)</div><div class="line">    draw_lines(line_img, lines)</div><div class="line">    <span class="keyword">return</span> line_img</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">weighted_img</span><span class="params">(img, initial_img, α=<span class="number">0.8</span>, β=<span class="number">1.</span>, λ=<span class="number">0.</span>)</span>:</span></div><div class="line">    <span class="keyword">return</span> cv2.addWeighted(initial_img, α, img, β, λ)</div></pre></td></tr></table></figure>
-<p>In order to draw a single line on the left and right lanes (for steps 6 to 8), I added several functions before applying draw_lines() function:</p>
+<h3 id="Steps-6-to-8"><a href="#Steps-6-to-8" class="headerlink" title="Steps 6 to 8"></a>Steps 6 to 8</h3><p>In order to draw a single line on the left and right lanes (for steps 6 to 8), I added several functions before applying draw_lines() function:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">separate_lines</span><span class="params">(lines)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    Leave for your own thinking </div><div class="line">    """ </div><div class="line">    <span class="keyword">return</span> right, left</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">reject_outliers</span><span class="params">(lines,  m1=<span class="number">0.4</span>, m2=<span class="number">0.5</span>)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    Leave for your own thinking </div><div class="line">    """ </div><div class="line">    <span class="keyword">return</span> new_lines</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_lines</span><span class="params">(lines)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    Leave for your own thinking </div><div class="line">    """ </div><div class="line">    <span class="keyword">return</span> extraAndCombine(result_lines)</div><div class="line">        </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">extraAndCombine</span><span class="params">(lines)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    Leave for your own thinking </div><div class="line">    """ </div><div class="line">    <span class="keyword">return</span> long_lines</div></pre></td></tr></table></figure>
-<p>Now, let’s take a look at how the pipeline works:</p>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>Now, let’s take a look at how the pipeline works:</p>
 <ul>
-<li><p>Show the original image:<br><img src="https://goo.gl/JIUx29" alt="alt text" title="original"></p>
+<li><p>Show the original image:<br><img src="http://omiuf085h.bkt.clouddn.com/image/Lane-lines-detection/original.jpg" alt="alt text" title="original"></p>
 </li>
-<li><p>Grayscale image:<br><img src="https://goo.gl/64ytde" alt="alt text" title="grayscale"></p>
+<li><p>Grayscale image:<br><img src="http://omiuf085h.bkt.clouddn.com/image/Lane-lines-detection/grayscale1.jpg" alt="alt text" title="gray scale"></p>
 </li>
-<li><p>Gaussian blurred image:<br><img src="https://goo.gl/DZSTt2" alt="alt text" title="gaussianblur"></p>
+<li><p>Gaussian blurred image:<br><img src="http://omiuf085h.bkt.clouddn.com/image/Lane-lines-detection/gaussianblur.jpg" alt="alt text" title="gaussian blur"></p>
 </li>
-<li><p>Canny edges image:<br><img src="https://goo.gl/TJRHQQ" alt="alt text" title="cannyedge"></p>
+<li><p>Canny edges image:<br><img src="http://omiuf085h.bkt.clouddn.com/image/Lane-lines-detection/cannyedge.jpg" alt="alt text" title="cannyedge"></p>
 </li>
-<li><p>Masked edges image:<br><img src="https://goo.gl/JZY9LS" alt="alt text" title="maskededge"></p>
+<li><p>Masked edges image:<br><img src="http://omiuf085h.bkt.clouddn.com/image/Lane-lines-detection/maskededge.jpg" alt="alt text" title="masked edge"></p>
 </li>
-<li><p>Hough lines image:<br><img src="https://goo.gl/p8ChG9" alt="alt text" title="segmented hough"></p>
+<li><p>Hough lines image:<br><img src="http://omiuf085h.bkt.clouddn.com/image/Lane-lines-detection/segmented.jpg" alt="alt text" title="segmented hough"></p>
 </li>
-<li><p>Final image after <strong>separate</strong>,<strong>average</strong>, <strong>extrapolate</strong>, and <strong>merge</strong> function:<br><img src="https://goo.gl/6Z3xeX" alt="alt text" title="finalimage"></p>
-</li>
-<li><p>Video with lane lines detetion:</p>
-<video width="480" height="270" controls><br>  <source src="https://www.youtube.com/watch?v=cJR8mmjCMuE" type="video/mp4"><br></video>
+<li><p>Final image after <strong>separate</strong>,<strong>average</strong>, <strong>extrapolate</strong>, and <strong>merge</strong> function:<br><img src="http://omiuf085h.bkt.clouddn.com/image/Lane-lines-detection/finalimage.jpg" alt="alt text" title="final image"></p>
 </li>
 </ul>
-]]></content>
+<h2 id="Video"><a href="#Video" class="headerlink" title="Video"></a>Video</h2><ul>
+<li>Video with lane lines detetion:</li>
+</ul>
+<iframe width="480" height="270" src="https://www.youtube.com/embed/cJR8mmjCMuE" frameborder="0" allowfullscreen></iframe>]]></content>
     </entry>
     
     <entry>
